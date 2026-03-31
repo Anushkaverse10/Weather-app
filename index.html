@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Check ☁️ Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link
+        href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap)"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg-gradient"></div>
+    <div id="particles"></div>
+
+    <div class="container">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Search any city..." autocomplete="off">
+                <button id="search-btn">
+                    <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+            </div>
+            <button id="location-btn" title="Use my location">
+                <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </button>
+        </div>
+
+        <div class="weather-card" id="weather-card">
+            <div class="initial-state" id="initial-state">
+                <div class="initial-icon">🌍</div>
+                <p>Enter a city to check the vibe</p>
+            </div>
+
+            <div class="loading-state hidden" id="loading-state">
+                <div class="loader"></div>
+                <p>Checking the vibes...</p>
+            </div>
+
+            <div class="error-state hidden" id="error-state">
+                <div class="error-icon">😵</div>
+                <p id="error-message">City not found</p>
+            </div>
+
+            <div class="weather-content hidden" id="weather-content">
+                <div class="weather-main">
+                    <div class="weather-icon-wrapper">
+                        <div class="weather-icon" id="weather-icon">☀️</div>
+                    </div>
+                    <div class="temperature-wrapper">
+                        <span class="temperature" id="temperature">--</span>
+                        <span class="degree">°C</span>
+                    </div>
+                    <p class="weather-description" id="description">--</p>
+                </div>
+
+                <div class="location-info">
+                    <h2 id="city-name">--</h2>
+                    <p id="date-time">--</p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <div class="detail-icon">💨</div>
+                        <div class="detail-info">
+                            <span class="detail-value" id="wind">--</span>
+                            <span class="detail-label">Wind</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💧</div>
+                        <div class="detail-info">
+                            <span class="detail-value" id="humidity">--</span>
+                            <span class="detail-label">Humidity</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">👁️</div>
+                        <div class="detail-info">
+                            <span class="detail-value" id="visibility">--</span>
+                            <span class="detail-label">Visibility</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">🌡️</div>
+                        <div class="detail-info">
+                            <span class="detail-value" id="feels-like">--</span>
+                            <span class="detail-label">Feels Like</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-section">
+                    <h3>Next Hours</h3>
+                    <div class="hourly-forecast" id="hourly-forecast">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with 💜 by <span class="your-name">YourName</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
