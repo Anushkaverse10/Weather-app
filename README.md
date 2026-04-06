@@ -1,6 +1,6 @@
 # 🌦️ Vibe Check Weather App
 
-A modern, aesthetic weather app built using **HTML, CSS & JavaScript** — designed with a GenZ UI ✨
+A modern, aesthetic weather app built using **HTML, CSS & JavaScript** and designed with a GenZ UI ✨
 
 ## 🚀 Live Demo
 
